@@ -25,6 +25,7 @@ public:
     virtual ~Lista();
 
     Q_INVOKABLE void addList();
+    Q_INVOKABLE void clearList();
 private:
 GroupDataModel * m_model;
 
@@ -35,4 +36,4 @@ void onModelChanged();
 };
 
 
-#endif /* LISTA_HPP_ */
+#endif

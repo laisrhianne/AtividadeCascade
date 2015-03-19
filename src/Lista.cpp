@@ -15,18 +15,18 @@ Lista::Lista() : QObject()
         m_model = new GroupDataModel();
         m_model->setSortedAscending(false);
         m_model->setGrouping(bb::cascades::ItemGrouping::None);
-    // TODO Auto-generated constructor stub
+
 
 }
 
-GroupDataModel * Lista::model() {   // Retorna a lista.
+GroupDataModel * Lista::model() {
 
     return m_model;
 }
 
 Lista::~Lista()
 {
-    // TODO Auto-generated destructor stub
+
 }
 
 void Lista::addList(){
@@ -45,3 +45,8 @@ void Lista::addList(){
         m_model->insert(test);
         emit onModelChanged();
 }
+void Lista::clearList() {
+    m_model->clear();
+
+}
+
